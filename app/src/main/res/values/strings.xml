@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SA97</string>
+    <string name="startservice">StartService</string>
+    <string name="stopservice">StopService</string>
+    <string name="bind">Bind</string>
+    <string name="unbind">Unbind</string>
+</resources>
