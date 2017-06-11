@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String LOG = "myLogs";
 
-    ServiceConnection servConnect;
+    ServiceConnection serviceConnection;
 
     Intent intent = new Intent("bombey77.sa97service.bomba");
 
@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
         Log.d(LOG, "onCreate");
 
-        servConnect = new ServiceConnection() {
+        serviceConnection = new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
             bind = true;
@@ -55,13 +55,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickBind(View view) {
-        bindService(intent, servConnect, BIND_AUTO_CREATE);
+        bindService(intent, serviceConnection, BIND_AUTO_CREATE);
         Log.d(LOG, "bindService");
     }
 
     public void onClickUnbind(View view) {
         if (!bind) return;
-        unbindService(servConnect);
+        unbindService(serviceConnection);
         bind = false;
         Log.d(LOG, "onUnbindService ");
     }
