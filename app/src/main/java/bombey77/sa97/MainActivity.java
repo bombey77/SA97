@@ -1,5 +1,6 @@
 package bombey77.sa97;
 
+
 import android.content.ComponentName;
 import android.content.Intent;
 import android.content.ServiceConnection;
@@ -62,6 +63,6 @@ public class MainActivity extends AppCompatActivity {
         if (!bind) return;
         unbindService(servConnect);
         bind = false;
-        Log.d(LOG, "onUnbindService");
+        Log.d(LOG, "onUnbindService ");
     }
 }
