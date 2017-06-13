@@ -70,6 +70,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         Log.d(LOG, "onDestroy - MainActivity");
+        Log.d(LOG, "onDestroy - MainActivity");
+        Log.d(LOG, "onDestroy - MainActivity");
         onClickUnbind(null);
     }
 }
